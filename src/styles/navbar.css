@@ -1,0 +1,32 @@
+
+.nabvar--custom{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar-transparent {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo casi transparente */
+    backdrop-filter: blur(4px); /* Opcional: Desenfoque detrás del navbar */
+    border-bottom: none; /* Elimina el borde inferior */
+    box-shadow: none; /* Asegúrate de que no haya sombras */
+    transition: background-color 0.3s ease; /* Transición suave para cambios */
+}
+
+.nabvar_link--custom{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.nabvar_link--custom a {
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: #ffbf2f;
+    text-decoration: none !important; /* Quita la línea debajo del enlace */
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}

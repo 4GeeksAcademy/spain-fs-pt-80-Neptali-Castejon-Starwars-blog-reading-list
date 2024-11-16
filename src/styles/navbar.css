@@ -1,32 +1,54 @@
+/* Contenedor general del navbar */
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    padding-top: 20px;
+    background-color: transparent;
+    border-bottom: 1px #48494a solid;
+    box-shadow: none;
+}
 
-.nabvar--custom{
+/* Logo centrado */
+.logo-container {
+    margin-bottom: 5px; /* Espaciado entre el logo y el navbar */
+    text-align: center;
+    width: 185px;
+}
+
+/* Estilo del navbar */
+.nabvar--custom {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 10px;
 }
 
-.navbar-transparent {
-    background-color: rgba(0, 0, 0, 0.2); /* Fondo casi transparente */
-    backdrop-filter: blur(4px); /* Opcional: Desenfoque detrás del navbar */
-    border-bottom: none; /* Elimina el borde inferior */
-    box-shadow: none; /* Asegúrate de que no haya sombras */
-    transition: background-color 0.3s ease; /* Transición suave para cambios */
-}
-
-.nabvar_link--custom{
+/* Estilo de los enlaces */
+.nabvar_link--custom {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 15px;
 }
 
 .nabvar_link--custom a {
-    font-weight: 100;
-    letter-spacing: 2px;
-    color: #ffbf2f;
-    text-decoration: none !important; /* Quita la línea debajo del enlace */
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #B5B7B7;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.text-uppercase {
-    text-transform: uppercase;
+.nabvar_link--custom a:hover {
+    color: #fff; /* Color al pasar el mouse */
 }
+
+/* Botón de hamburguesa */
+.navbar-toggler-icon {
+    color: #B5B7B7;
+}
+

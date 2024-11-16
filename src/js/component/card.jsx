@@ -1,20 +1,44 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../styles/card.css";
+import { Context } from "../store/appContext";
+import "../../styles/styles.css"
+import { useNavigate } from "react-router";
 
-export const Card = () => (
-    <div className="card-container">
-        <div className="card__wrapper d-flex flex-column">
-            <div className="card">
-                <img 
-                    className="card__image" 
-                    src="https://i.blogs.es/568b07/star-wars-outlaws-videojuego/375_375.webp" 
-                    alt="Character"
-                />
+
+export const Card = (props) => {
+
+    const {store, actions } = useContext(Context)
+    const navigate = useNavigate();
+
+    const handleLink = () => { 
+        navigate(`/details/${props.type}/${props.uid}`)
+    }
+    
+    return(
+        <div className="card p-2 card__custom col-sm-6 col-md-4 col-lg-3">
+            <div className="card__wrapper ">
+                <figure className="card__figure" onClick={handleLink}>
+                    <img 
+                        className="card__image" 
+                        src={props.img} 
+                        alt={props.name}
+                    />
+                    <figcaption className="card__figcaption card__figcaption--hidden">{props.name}</figcaption>
+                </figure>
+                <div className="card__info">
+                    <h2 className="card__title text-start mt-0" title={props.name}>{props.name}</h2>
+                </div>
             </div>
-            <div className="card__info">
-                <h2 className="card__title text-start mt-0">Character Name</h2>
-                <p className="card__description text-start mt-0">Character Description</p>
+            <div className="card__button d-flex">
+               
+                    <button aria-label={`Details about ${props.name}`} onClick={handleLink}>
+                        More
+                    </button>
+                    <button aria-label={`Add ${props.name} to favorites`}>
+                        Fav
+                    </button>
             </div>
+            <img className="card__img--custom" src="https://cdn.worldvectorlogo.com/logos/star-wars-4.svg"/>
         </div>
-    </div>
-);
+    )
+};

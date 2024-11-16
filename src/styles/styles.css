@@ -1,0 +1,5 @@
+.app-background {
+    background-color: rgba(0, 0, 0, 0.9);
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    color: #fff; /* Texto blanco para buen contraste */
+}

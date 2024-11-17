@@ -49,6 +49,11 @@ export const Navbar = () => {
 									Planets
 								</Link>
 							</li>
+							<li className="nav-item">
+								<Link className="nav-link text-uppercase" to="/planets">
+									Favorites
+								</Link>
+							</li>
 						</ul>
 					</div>
 				</div>

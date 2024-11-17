@@ -1,0 +1,14 @@
+.card__figure--vehicles{
+    overflow: hidden;
+    margin: 0;
+}
+
+.card__wrapper--vehicles {
+    padding: 5px;
+    border: black 2px solid;
+}
+
+.card__icon--custom--vehicles{
+    width: 100px;
+    margin: 10px 0 5px 0;
+}

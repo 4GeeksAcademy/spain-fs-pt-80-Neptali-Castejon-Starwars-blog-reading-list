@@ -1,6 +1,5 @@
 /* Estilo para el contenedor que ocupa toda la pantalla */
 .card-container {
-
     width: 100vw;
     height: 100vh;
     background-image: url('https://wallpapercave.com/wp/wp3614494.jpg-');
@@ -36,17 +35,6 @@
 .card__custom{
     border-radius: 0;
 }
-/* .card__custom {
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: transparent;
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
-    z-index: 2;
-} */
 
 /* Estilo de la imagen de la tarjeta */
 .card__figure {
@@ -54,7 +42,6 @@
     position: relative;
     width: 100%;
     aspect-ratio: 1; /* Mantiene la proporción 1:1 */
-    /* border-radius: 8px 8px 0 0; */
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -66,7 +53,7 @@
     left: 50%;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen rellene completamente el contenedor */
+    object-fit: cover; 
     transform: translate(-50%, -50%);
     padding: 5px;
     border: black 2px solid;
@@ -81,15 +68,14 @@
 }
 
 .card__img--custom--- {
-    width: 100px; /* Ancho fijo de 100px */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-height: 80px; /* El alto máximo de 80px */
-    object-fit: cover; /* Mantiene la imagen centrada y recorta las partes sobrantes */
+    width: 100px;
+    height: auto; 
+    max-height: 80px; 
+    object-fit: cover; 
 }
 
-
 .card__figcaption--hidden {
-    display: none; /* Oculto pero accesible */
+    display: none; 
 }
 
 /* Contenedor de la información de la tarjeta */

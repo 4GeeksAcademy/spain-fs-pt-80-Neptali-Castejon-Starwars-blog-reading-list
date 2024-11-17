@@ -1,0 +1,24 @@
+/* Variables globales */
+:root {
+    --padding-small: 0.5rem;
+    --border-width: 2px;
+    --border-color: black;
+}
+
+/* Clases reutilizables */
+.card__figure--people,
+.card__wrapper--people,
+.card__image--people {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Específico */
+.card__wrapper--people {
+    padding: var(--padding-small);
+    border: var(--border-color) var(--border-width) solid;
+}
+.card__icon--custom--people {
+    width: 6rem;
+    margin: 10px 0 5px;
+}

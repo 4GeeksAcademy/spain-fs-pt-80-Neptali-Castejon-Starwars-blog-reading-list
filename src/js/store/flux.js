@@ -4,14 +4,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 			url: 'https://www.swapi.tech/api',
 			people: [],
 			planets: [],
-			vehicles: []
+			vehicles: [],
+			favorites: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
 
 			clearSingle: ()=> setStore({single: {}}),
 			
-			addRemoveFavorite: (el) => {},
+			addRemoveFavorite: (el) => {
+                const store = getStore();
+                const isFavorite = store.favorites.some(fav => fav.uid === el.uid);
+                const newFavorites = isFavorite
+                    ? store.favorites.filter(fav => fav.uid !== el.uid)
+                    : [...store.favorites, el];
+
+                setStore({ favorites: newFavorites });
+                console.log("Favoritos actualizados:", newFavorites);
+            },		
 
 			getData: async (type) => {
 				try {
@@ -20,8 +30,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if(!resp.ok) throw new Error("Error fetching data");
 					const data = await resp.json();
 
+					console.log("este es el resultado de la data", data)
 					setStore({[type]: data.results})
-					console.log(data.results)
+					console.log("este es el resultado de la data.results", data.results)
 				} catch (error) {
 					console.error();
 				}

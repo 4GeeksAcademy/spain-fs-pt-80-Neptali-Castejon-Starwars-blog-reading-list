@@ -11,18 +11,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Use getActions to call a function within a fuction
 
 			clearSingle: ()=> setStore({single: {}}),
-			
+
 			addRemoveFavorite: (el) => {
-                const store = getStore();
-                const isFavorite = store.favorites.some(fav => fav.uid === el.uid);
-                const newFavorites = isFavorite
-                    ? store.favorites.filter(fav => fav.uid !== el.uid)
-                    : [...store.favorites, el];
-
-                setStore({ favorites: newFavorites });
-                console.log("Favoritos actualizados:", newFavorites);
-            },		
-
+				const store = getStore();
+				const isFavorite = store.favorites.some(fav => `${fav.type}-${fav.uid}` === `${el.type}-${el.uid}`);
+				const newFavorites = isFavorite
+					? store.favorites.filter(fav => `${fav.type}-${fav.uid}` !== `${el.type}-${el.uid}`)
+					: [...store.favorites, el];
+			
+				setStore({ favorites: newFavorites });
+				console.log("Favoritos actualizados:", newFavorites);
+			},			
+			 
 			getData: async (type) => {
 				try {
 					const store = getStore();

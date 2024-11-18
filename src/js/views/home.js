@@ -14,8 +14,10 @@ export const Home = () => {
     return(
         <div className="container-fluid p-0">
             <div className="d-flex flex-column align-items-center p-sm-3 p-md-0 container">
-                <div className="slider-container pb-3 mb-3 ">
-                    <div className="row">
+            
+                {store.people.length > 0 ? <span>People</span> : ''}
+                <div className="row container">
+                    <div className="scrolling-wrapper p-0 pb-3">
                         {store.people?.map(person => (
                             <Card  
                                 key={person.uid}
@@ -27,8 +29,10 @@ export const Home = () => {
                         ))}
                     </div>
                 </div>
-                <div className="slider-container pb-3 mb-3 ">
-                    <div className="row">
+
+                {store.vehicles.length > 0 ? <span>Vehicles</span> : ''}
+                <div className="row container">
+                    <div className="scrolling-wrapper p-0 pb-3">
                         {store.vehicles?.map(vehicle => (
                             <Card  
                                 key={vehicle.uid}
@@ -40,9 +44,13 @@ export const Home = () => {
                         ))}
                     </div>
                 </div>
-                <div className="slider-container pb-3 mb-3 ">
-                    <div className="row">
-                        {store.planets?.map(planet => (
+
+                {store.planets.length > 0 ? <span>Planets</span> : ''}
+                <div className="row container mb-5">
+                    <div className="scrolling-wrapper p-0 pb-3">
+                    {store.planets
+                        ?.filter(planet => planet.uid !== "1") // Filtra el elemento con uid '1'
+                        .map(planet => (
                             <Card  
                                 key={planet.uid}
                                 uid={planet.uid}

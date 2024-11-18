@@ -3,18 +3,20 @@ import "../../styles/card.css";
 import { Context } from "../store/appContext";
 import "../../styles/styles.css"
 import { useNavigate } from "react-router";
+import "../../styles/home.css";
 
 
 export const Card = (props) => {
 
-    const {store, actions } = useContext(Context)
+    const {store, actions } = useContext(Context);
     const navigate = useNavigate();
 
     const handleLink = () => {
         navigate(`/details/${props.type}/${props.uid}`);
     };
     
-    const isFavorite = store.favorites.some(fav => fav.uid === props.uid);
+    // Cambié la lógica para verificar favoritos usando 'type' y 'uid'
+    const isFavorite = store.favorites.some(fav => `${fav.type}-${fav.uid}` === `${props.type}-${props.uid}`);
 
     return (
         <div className="card card__custom p-1 col-sm-12 col-md-6 col-lg-4 col-xl-4">
@@ -31,10 +33,10 @@ export const Card = (props) => {
                     </div>
                 </div>
                 <div className="card__button d-flex">
-                    <button aria-label={`Details about ${props.name}`} onClick={handleLink}>
+                    <button className="buttom--custom" aria-label={`Details about ${props.name}`} onClick={handleLink}>
                         More
                     </button>
-                    <button
+                    <button className="buttom--custom"
                         aria-label={isFavorite ? `Remove ${props.name} from favorites` : `Add ${props.name} to favorites`}
                         onClick={() => actions.addRemoveFavorite(props)}
                     >
@@ -46,7 +48,3 @@ export const Card = (props) => {
         </div>
     );
 };
-
-
-
-

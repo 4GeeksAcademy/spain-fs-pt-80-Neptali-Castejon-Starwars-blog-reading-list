@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
+
 	return (
 		<header className="navbar-container mb-5">
-			{/* Logo centrado */}
 			<div className="logo-container">
 				<Link to="/">
 					<img
@@ -15,10 +17,8 @@ export const Navbar = () => {
 					/>
 				</Link>
 			</div>
-			{/* Navbar debajo */}
-			<nav className="navbar navbar-expand-lg navbar-transparent container-fluid-" data-bs-theme="dark">
+			<nav className="navbar navbar-expand-lg navbar-transparent" data-bs-theme="dark">
 				<div className="container-fluid">
-					{/* Botón para colapsar el menú en pantallas pequeñas */}
 					<button
 						className="navbar-toggler collapsed nabvar--custom"
 						type="button"
@@ -30,8 +30,6 @@ export const Navbar = () => {
 					>
 						<span className="navbar-toggler-icon"></span>
 					</button>
-
-					{/* Contenido del navbar */}
 					<div className="collapse navbar-collapse justify-content-center" id="navbarScroll">
 						<ul className="navbar-nav">
 							<li className="nav-item">
@@ -50,9 +48,40 @@ export const Navbar = () => {
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link text-uppercase" to="/planets">
+								<Link className="nav-link text-uppercase" to="/favorites">
 									Favorites
 								</Link>
+							</li>
+							<li className="nav-item dropdown">
+								<a
+									className="nav-link dropdown-toggle text-uppercase"
+									href="#"
+									id="favoritesDropdown"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Favorites List
+								</a>
+								<ul className="dropdown-menu" aria-labelledby="favoritesDropdown">
+									{store.favorites.length > 0 ? (
+										store.favorites.map((fav, index) => (
+											<li key={index} className="dropdown-item">
+												<Link to={`/details/${fav.type}/${fav.uid}`}>
+													{fav.name}
+												</Link>
+												<button
+													className="btn btn-danger btn-sm ms-2"
+													onClick={() => actions.addRemoveFavorite(fav)}
+												>
+													X
+												</button>
+											</li>
+										))
+									) : (
+										<li className="dropdown-item">No favorites yet</li>
+									)}
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -61,4 +90,3 @@ export const Navbar = () => {
 		</header>
 	);
 };
-

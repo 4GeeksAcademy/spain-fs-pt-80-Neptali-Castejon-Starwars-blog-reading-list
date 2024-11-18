@@ -1,17 +1,37 @@
+/* Figuras de planetas */
 .card__figure--planets {
     overflow: hidden;
     margin: 0;
 }
 
+/* Contenedor de planetas */
 .card__wrapper--planets {
     padding: 5px;
-    border: black 2px solid;
+    border: 2px solid black;
 }
 
+/* Imagen de vehículos */
 .card__image--vehicles {
     width: 100%;
 }
+
+/* Ícono de planetas */
 .card__icon--custom--planets {
     width: 100px;
-    margin: 10px 0 5px 0;
+    margin: 10px 0 5px;
+}
+
+/* Fondo blanco de tarjetas */
+.card__wrapper--custom {
+    background-color: white;
+}
+
+/* Estilo del texto */
+span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    line-height: 1.25em;
+    padding: 9px 0 8px;
+    text-transform: uppercase;
 }

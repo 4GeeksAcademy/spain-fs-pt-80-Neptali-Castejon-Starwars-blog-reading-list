@@ -13,12 +13,30 @@
     overflow: hidden;
 }
 
-/* Específico */
+/* Estilo específico para contenedor de personas */
 .card__wrapper--people {
     padding: var(--padding-small);
     border: var(--border-color) var(--border-width) solid;
 }
+
+/* Estilo del ícono personalizado para personas */
 .card__icon--custom--people {
     width: 6rem;
     margin: 10px 0 5px;
+}
+
+/* Fondo blanco para tarjetas personalizadas */
+.card__wrapper--custom {
+    background-color: white;
+}
+
+/* Estilo general para el texto */
+span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    line-height: 1.25em;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
 }

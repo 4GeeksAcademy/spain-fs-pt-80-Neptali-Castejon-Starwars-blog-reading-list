@@ -1,14 +1,32 @@
-.card__figure--vehicles{
+/* Figuras de vehículos */
+.card__figure--vehicles {
     overflow: hidden;
     margin: 0;
 }
 
+/* Contenedor de vehículos */
 .card__wrapper--vehicles {
     padding: 5px;
-    border: black 2px solid;
+    border: 2px solid black;
 }
 
-.card__icon--custom--vehicles{
+/* Ícono de vehículos */
+.card__icon--custom--vehicles {
     width: 100px;
-    margin: 10px 0 5px 0;
+    margin: 10px 0 5px;
+}
+
+/* Fondo blanco de tarjetas */
+.card__wrapper--custom {
+    background-color: white;
+}
+
+/* Estilo de texto */
+span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    line-height: 1.25em;
+    padding: 9px 0 8px;
+    text-transform: uppercase;
 }

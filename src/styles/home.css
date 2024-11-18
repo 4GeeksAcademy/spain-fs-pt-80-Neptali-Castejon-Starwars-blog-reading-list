@@ -1,4 +1,4 @@
-/* Contenedor principal */
+/* Contenedor Principal */
 .home-container {
     position: relative;
     width: 100vw;
@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.7); /* Fallback */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
 }
 
 .home-container::before {
@@ -17,10 +17,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Superposición */
+    background-color: rgba(0, 0, 0, 0.8); /* Superposición más oscura */
     z-index: 1;
 }
 
+/* Icono Star Wars */
 .icon-container {
     position: relative;
     z-index: 2;
@@ -29,18 +30,28 @@
 .star-wars-icon {
     width: 300px;
     height: auto;
-    filter: drop-shadow(2px 2px 5px black);
+    filter: drop-shadow(2px 2px 5px black); /* Sombra para el icono */
 }
 
-/* Contenedor del slider */
+/* Slider */
 .slider-container {
     display: flex;
     justify-content: start;
-    padding: 0;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
 
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-wrapper .card {
+    display: inline-block;
+}
+
+/* Tarjetas */
 .card {
     padding: 0;
     background-color: transparent;
@@ -48,4 +59,24 @@
 
 .card__wrapper--custom {
     background-color: white;
+}
+
+/* Textos */
+h2 {
+    font-family: "DINNext";
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    color: white;
+    margin-bottom: 12px;
+}
+
+span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    line-height: 1.25em;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
 }

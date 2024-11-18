@@ -1,37 +1,40 @@
+/* General Styles */
 /* Contenedor general del navbar */
 .navbar-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: rgba(0, 0, 0, 0.7); */
-    padding-top: 20px;
     background-color: transparent;
     border-bottom: 1px #48494a solid;
     box-shadow: none;
+    padding-top: 20px;
 }
 
-/* Logo centrado */
+/* Logo */
+/* Contenedor del logo con espaciado */
 .logo-container {
-    margin-bottom: 5px; /* Espaciado entre el logo y el navbar */
+    margin-bottom: 5px;
     text-align: center;
     width: 185px;
 }
 
-/* Estilo del navbar */
+/* Navbar Styles */
+/* Configuración del diseño principal del navbar */
 .nabvar--custom {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Estilo de los enlaces */
+/* Enlaces del navbar */
 .nabvar_link--custom {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
+/* Estilo individual para cada enlace */
 .nabvar_link--custom a {
     font-weight: 400;
     font-size: 1rem;
@@ -44,11 +47,11 @@
 }
 
 .nabvar_link--custom a:hover {
-    color: #fff; /* Color al pasar el mouse */
+    color: #fff; /* Cambio de color en hover */
 }
 
-/* Botón de hamburguesa */
+/* Navbar Button */
+/* Estilo del ícono del botón de hamburguesa */
 .navbar-toggler-icon {
     color: #B5B7B7;
 }
-

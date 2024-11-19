@@ -10,7 +10,7 @@ export const Favorites = () => {
 		<div className="container text-center ">
 			
 			{store.favorites.length > 0 ? <span>Favorites</span> : 'No favorites yet.'}
-			<div className="row">
+			<div className="row mt-3">
 				{store.favorites.length > 0 ? (
 					store.favorites.map((fav) => (
 						<Card

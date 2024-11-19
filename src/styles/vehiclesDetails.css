@@ -10,15 +10,26 @@
     border: 2px solid black;
 }
 
+/* Fondo blanco de tarjetas */
+.card__wrapper--custom--vehicles {
+    padding: 1rem;
+    background-color: white;
+}
+
 /* Ícono de vehículos */
 .card__icon--custom--vehicles {
     width: 100px;
     margin: 10px 0 5px;
 }
 
-/* Fondo blanco de tarjetas */
-.card__wrapper--custom {
-    background-color: white;
+/* Estilo para el titulo */
+.card__title--vehicles{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    color: white;
+    order: 1;
+    margin-bottom: 12px;
 }
 
 /* Estilo de texto */

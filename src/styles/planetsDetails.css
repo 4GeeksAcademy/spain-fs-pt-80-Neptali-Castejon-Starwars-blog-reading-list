@@ -10,6 +10,11 @@
     border: 2px solid black;
 }
 
+.card__wrapper--custom--planets{
+    padding: 1rem;
+    background-color: white;
+}
+
 /* Imagen de vehículos */
 .card__image--vehicles {
     width: 100%;
@@ -21,9 +26,14 @@
     margin: 10px 0 5px;
 }
 
-/* Fondo blanco de tarjetas */
-.card__wrapper--custom {
-    background-color: white;
+/* Estilo para el titulo */
+.card__title--planets{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    color: white;
+    order: 1;
+    margin-bottom: 12px;
 }
 
 /* Estilo del texto */

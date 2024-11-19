@@ -55,3 +55,23 @@
 .navbar-toggler-icon {
     color: #B5B7B7;
 }
+
+.dropdown-menu__link{
+    text-decoration: none;  
+    color: inherit;    
+    background: none; 
+    border: none;
+    cursor: pointer;  
+}
+
+.icon-btn {
+    background: none;         
+    border: none;             
+    padding: 0;             
+    cursor: pointer; 
+}
+
+.icon-btn .fa-x {
+    color: #ffbf2f;             
+    font-size: 1rem;
+}

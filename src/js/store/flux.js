@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			getOne: async ( type, uid) => {
+			getOne: async ( type, uid,) => {
 				try {
 					const store = getStore();
 					const resp = await fetch(store.url+`/${type}/${uid}`);

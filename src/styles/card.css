@@ -64,8 +64,8 @@
     width: 80px;
     position: absolute;
     z-index: 3;
-    right: 25px;
-    top: 25px;
+    right: 2rem;
+    top: 2rem;
 }
 
 /* Imagen personalizada con tamaño fijo */
@@ -112,15 +112,54 @@
 }
 
 /* Estilo del botón */
-.card__buttom {
-    bottom: 0;
+.card__button {
+    display: flex;
+    justify-content: space-between; /* Asegura espacio entre los botones */
+    gap: 8px; /* Opcional, añade espacio entre ellos */
 }
 
-.buttom--custom {
-    width: 100px;
+.card__button button {
+    flex: 1; /* Cada botón ocupa el mismo espacio */
 }
-
 /* Fondo blanco para tarjeta personalizada */
 .card__wrapper--custom {
+    padding: 10px;
     background-color: white;
 }
+
+/* Estilo base para el botón */
+.custom-btn {
+    all: unset;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Botón en estado no seleccionado */
+.custom-btn.not-selected {
+    font-family: "DINNEXT", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: black 1.5px solid;
+    border-radius: 0;
+    background-color: transparent;
+
+}
+
+/* Botón en estado seleccionado */
+.custom-btn.selected {
+    font-family: "DINNEXT", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #212529;
+    border: black 1.5px solid;
+    border-radius: 0;
+}
+
+

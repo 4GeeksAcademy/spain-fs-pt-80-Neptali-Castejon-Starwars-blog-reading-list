@@ -18,7 +18,7 @@ export const Navbar = () => {
 				</Link>
 			</div>
 			<nav className="navbar navbar-expand-lg navbar-transparent" data-bs-theme="dark">
-				<div className="container-fluid">
+				<div className="container-fluid justify-content-center text-center">
 					<button
 						className="navbar-toggler collapsed nabvar--custom"
 						type="button"
@@ -66,15 +66,15 @@ export const Navbar = () => {
 								<ul className="dropdown-menu" aria-labelledby="favoritesDropdown">
 									{store.favorites.length > 0 ? (
 										store.favorites.map((fav, index) => (
-											<li key={index} className="dropdown-item">
-												<Link to={`/details/${fav.type}/${fav.uid}`}>
+											<li key={index} className="dropdown-item d-flex justify-content-between align-items-center">
+												<Link className="dropdown-menu__link" to={`/details/${fav.type}/${fav.uid}`}>
 													{fav.name}
 												</Link>
 												<button
-													className="btn btn-danger btn-sm ms-2"
+													className="icon-btn ms-3"
 													onClick={() => actions.addRemoveFavorite(fav)}
 												>
-													X
+													<span class="fa-solid fa-x"></span>
 												</button>
 											</li>
 										))

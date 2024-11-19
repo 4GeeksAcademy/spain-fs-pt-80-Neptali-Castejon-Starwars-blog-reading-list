@@ -10,7 +10,7 @@ export const Planets = () => {
 		<div className="container text-center ">
             
             {store.planets.length > 0 ? <span>Planets</span> : 'No planets yet.'}
-			<div className="row">
+			<div className="row mt-3 pb-5">
                 {store.planets
                     ?.filter(planet => planet.uid !== "1") // Filtra el elemento con uid '1'
                     .map(planet => (

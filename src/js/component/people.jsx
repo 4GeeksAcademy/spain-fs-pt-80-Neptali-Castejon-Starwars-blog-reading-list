@@ -10,7 +10,7 @@ export const People = () => {
 		<div className="container text-center ">
             
 			{store.people.length > 0 ? <span>People</span> : 'No people yet.'}
-			<div className="row">
+			<div className="row mt-3 pb-5">
                 {store.people?.map(people => (
                     <Card  
                         key={people.uid}

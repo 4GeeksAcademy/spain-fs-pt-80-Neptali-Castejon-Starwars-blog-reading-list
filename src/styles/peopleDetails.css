@@ -6,10 +6,10 @@
 }
 
 /* Clases reutilizables */
-.card__figure--people,
-.card__wrapper--people,
-.card__image--people {
+.card__figure--types,
+.card__image--types {
     margin: 0;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -19,16 +19,27 @@
     border: var(--border-color) var(--border-width) solid;
 }
 
+.card__wrapper--custom--people{
+    padding: 1rem;
+    background-color: white;
+}
+
 /* Estilo del ícono personalizado para personas */
 .card__icon--custom--people {
     width: 6rem;
     margin: 10px 0 5px;
 }
 
-/* Fondo blanco para tarjetas personalizadas */
-.card__wrapper--custom {
-    background-color: white;
+/* Estilo para el titulo */
+.card__title--people{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    color: white;
+    order: 1;
+    margin-bottom: 12px;
 }
+
 
 /* Estilo general para el texto */
 span {

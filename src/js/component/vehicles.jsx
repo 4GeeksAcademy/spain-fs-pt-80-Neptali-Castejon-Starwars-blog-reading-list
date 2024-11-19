@@ -10,7 +10,7 @@ export const Vehicles = () => {
 		<div className="container text-center ">
 
             {store.vehicles.length > 0 ? <span>Vehicles</span> : 'No vehicles yet.'}
-			<div className="row">
+			<div className="row mt-3 pb-5">
                 {store.vehicles?.map(vehicle => (
                     <Card  
                         key={vehicle.uid}

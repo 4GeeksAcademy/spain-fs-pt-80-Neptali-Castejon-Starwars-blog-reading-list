@@ -143,23 +143,24 @@
 /* Botón en estado no seleccionado */
 .custom-btn.not-selected {
     font-family: "DINNEXT", Helvetica, Arial, sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 500;
     border: black 1.5px solid;
     border-radius: 0;
     background-color: transparent;
-
+    padding: 0.2rem;
 }
 
 /* Botón en estado seleccionado */
 .custom-btn.selected {
     font-family: "DINNEXT", Helvetica, Arial, sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 500;
     color: #fff;
     background-color: #212529;
     border: black 1.5px solid;
     border-radius: 0;
+    padding: 5px;
 }
 
 

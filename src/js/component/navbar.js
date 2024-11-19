@@ -61,7 +61,7 @@ export const Navbar = () => {
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
-									Favorites List
+									Favorites List <span className="nav-item--count">{store.favorites.length}</span>
 								</a>
 								<ul className="dropdown-menu" aria-labelledby="favoritesDropdown">
 									{store.favorites.length > 0 ? (

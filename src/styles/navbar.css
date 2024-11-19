@@ -75,3 +75,11 @@
     color: #ffbf2f;             
     font-size: 1rem;
 }
+
+.nav-item--count{
+    background-color: transparent;
+    padding: 2px 5px;
+    margin-left: 5px;
+    font-size: 1rem;
+    border: #B5B7B7 1.5px solid;
+}
